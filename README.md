@@ -1,2 +1,16 @@
+
 # ShutterUp-image-gallery-app
-Gallery and image selling single page web application using html, css, bootstrap, javascript, jquery, ajax, php, laravel
+## Gallery and Image stocking wesite
+### Used web technologies
+- Html
+- Css
+- Javascript
+- Jquery
+- Ajax
+- Php
+- Laravel
+- Mysql
+- Other libraries
+### #Note-
+Get project commits on master branch. First commit is still developing 
+and need some feature and have some problem. Get the latest commit.
