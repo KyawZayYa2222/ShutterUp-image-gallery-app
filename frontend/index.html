@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shutter Up</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <!-- <link rel="stylesheet" href="css/owl.theme.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/81e52b24ee.js" crossorigin="anonymous"></script>
+</head>
+<body id="home-page-body">
+    <div id="loading">
+        <div class="d-flex justify-content-center align-items-center bg-light loading">
+            <div>
+                <div class="spinner-grow text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-info" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-secondary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+<header>
+    <!-- navbar  -->
+    <div class="navbar d-flex justify-content-between border border-start-0 border-end-0 sticky-top">
+        <div class="brand ms-2"><a href="http://127.0.0.1:5500/" class="text-grd">Shutter Up</a></div>
+        <!-- nav menu trigger btn for mibile  -->
+        <button id="menu-toggle" class="btn d-lg-none me-2"><i class="fa-solid fa-bars-staggered fs-20"></i></button>
+        <ul class="nav-links d-lg-flex d-none mx-auto mt-3 fs-18">
+            <li class="px-2"><a href="#home">Home</a></li>
+            <li class="px-2 border-l"><a href="#premium_featured" data-href="premium-featured.html">Premium featured</a></li>
+            <li class="px-2 border-l"><a href="#license">License</a></li>
+            <!-- <li class="px-2 border-l"><a href="#aboutus">About us</a></li> -->
+            <li class="px-2 border-l"><a href="#contactus">Contact us</a></li>
+            <li class="px-2 border-l login-link"><a href="login.html">Login</a></li>
+            <li class="px-2 border-l register-link"><a href="register.html">Register</a></li>
+        </ul>
+    </div>
+
+    <!-- side menu for mobile  -->
+    <div class="side-menu fixed-top d-flex flex-column justify-content-center px-3">
+        <a href="http://127.0.0.1:5500/" class="text-grd h2 position-absolute top-0 start-0 ms-2 mt-2">Shutter Up</a>
+        <span class="h3 position-absolute top-0 end-0 me-2 mt-2" id="sidebar-close-btn"><i class="fa-solid fa-xmark"></i></span>
+        <ul>
+            <li><a href="#home" class="side-menu-link">Home</a></li>
+            <li><a href="#premium_featured" class="side-menu-link">Premium featured</a></li>
+            <li><a href="#license" class="side-menu-link">License</a></li>
+            <!-- <li><a href="#aboutus">About us</a></li> -->
+            <li><a href="#contactus" class="side-menu-link">Contact us</a></li>
+            <li><a href="#profile" class="side-menu-link">Profile</a></li>
+            <li class="login-link"><a href="login.html">Login</a></li>
+            <li class="register-link"><a href="register.html">Register</a></li>
+        </ul>
+    </div>
+
+    <!-- searchbar  -->
+    <div class="container-fluid">
+        <div class="searchbar mt-2 d-flex justify-content-between">
+            <form method="get" class="flex-md-grow-1 d-md-block d-none mx-md-5" id="search-form">
+                <div class="d-md-flex flex-column d-none position-relative" id="searchbox" style="max-width: 900px;">
+                    <div class="d-flex form-con">
+                        <input type="text" name="search_key" placeholder="Search . ." id="search-input" autocomplete="off">
+                        <button type="submit" class="submit-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+            </form>
+            
+
+            <!-- search btn for mobile -->
+            <a href="#" class="d-md-none d-block p-2 text-secondary fs-20" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <!-- search box Modal for mobile -->
+            <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="#" method="get" class="w-100" id="search-form-moblie">
+                        <div class="d-flex bg-light px-3 py-1 rounded-pill border border-secondary mb-2">
+                            <input type="text" placeholder="Search" id="search-input-mobile">
+                            <button type="submit" class="submit-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                        <span class="d-block mb-1">Related categories</span>
+                        <div class="overflow-scroll" style="max-height: 150px;">
+                            <div class="d-inline" id="category-mobile"></div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- <input type="text" placeholder="search"> -->
+
+            <a href="#premium_featured" class= "upgrade-btn ms-md-5 pt-2" ><i class="fa-solid fa-crown"></i> Premium+</a>
+            <a href="#profile" class="rounded-circle overflow-hidden ms-md-3" style="width:45px;height:45px">
+                <img src="storage/template_img/blank_profile.png" class="profile-img" width="45px">
+            </a>
+        </div>
+    </div>
+</header>
+
+<content>
+    <div id="home" class="page-content" style="display: none;">
+        <!-- contentbar  -->
+        <div class="container d-md-block d-none mt-md-3 text-secondary" id="category-bar"></div>
+
+        <!-- <a href="https://www.findingtheuniverse.com/wp-content/uploads/2018/08/Lightning-New-Mexico-by-Laurence-Norah.jpg" download>Download</a>
+        <img src="http://127.0.0.1:8000/storage/640a00a72bcc6BG-1141-Quality-Black-leather-handbag-for-women.jpg" alt="" width="200px"> -->
+
+        <div class="page-content container-md container-fluid mt-3">
+            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 mt-2" id="image-columns">
+            <!-- image columns  -->
+            </div>
+
+            <div id="image-content-loading"></div>
+        </div>
+    </div>
+
+    <div id="premium_featured" class="page-content">
+        <div class="mt-3 premium-sec">
+            <div class="container mb-md-5 mb-4">
+                <!-- <a href="#" onclick="downloadImg(2, 'normal')">downloadlink</a> -->
+                <h1 class="text-center mb-3 text01">Premium Featured</h1>
+                <h5 class="text-center text02">We offer many pictures, high quality and raw feature for <span class="text-grd">free</span>.
+                    But some of them are for <span class="text-grd">premium</span> members.
+                </h5>
+            </div>
+
+            <div class="premium-feature mb-md-4 mb-3 d-flex justify-content-center align-items-center">
+                <div class="container row row-cols-md-2 row-cols-1 py-2">
+                        <div class="col mb-md-1 mb-3">
+                            <div class="pre-txt text-center">
+                                <p>Why</p>
+                                <p>Should be</p>
+                                <p>a premium</p>
+                                <p>member ?</p>
+                            </div>
+                        </div>
+                        <div class="col my-auto">
+                            <ul class="fs-20" style="list-style: circle;">
+                                <li class="py-1">We offer some standard images for only premium members.</li>
+                                <li class="py-1">Get high quality, large size images.</li>
+                                <li class="py-1">Get raw extension picutres for editing and designing graphic for your bussiness.</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+
+            <!-- premium member purchases  -->
+            <div class="container">
+                <div id="premium-plan">
+                    <h1 class="text-center mb-2 text03">Premium Plans</h1>
+                    <h5 class="text-center mb-4">Choose a plan that right for you. Be more creative !</h5>
+                    <div class="d-flex flex-sm-row flex-column justify-content-sm-center align-items-center">
+                        <div class="plan-card m-plan overflow-hidden me-sm-3 mb-3">
+                            <span class="eff-01"></span>
+                            <span class="eff-02"></span>
+                            <div class="text-center px-3">
+                                <h4 class="txt-01 mt-3">Monthly</h4>
+                                <h1 class="txt-02">6$</h1>
+                                <h6 class="txt-03 pb-3 mb-4">/ per month</h6>
+                                <h4 class="txt-04">Plan User</h4>
+                                <h2 class="txt-05 mb-3">4</h2>
+                                <button class="get-plan-btn px-5 py-2 rounded-pill" onclick="getPremium('monthly')">Get plan</button>
+                            </div>
+                        </div>
+                        <div class="plan-card y-plan overflow-hidden ms-sm-3 mb-3">
+                            <span class="eff-01"></span>
+                            <span class="eff-02"></span>
+                            <div class="text-center px-3">
+                                <h4 class="txt-01 mt-3">Yearly</h4>
+                                <h1 class="txt-02">68$</h1>
+                                <h6 class="txt-03 pb-3 mb-4">/ per year</h6>
+                                <h4 class="txt-04">Plan User</h4>
+                                <h2 class="txt-05 mb-3">6</h2>
+                                <button class="get-plan-btn px-5 py-2 rounded-pill" onclick="getPremium('yearly')">Get plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="license" class="page-content">
+        <div class="container mt-md-4 mt-3 license-content">
+            <h1 class="text-center">What is <span class="text-grd">allowed</span> ?</h1>
+            <!-- <div class="mx-auto"> -->
+                <ul class="fs-20 mx-auto mb-md-5 mb-4">
+                    <li class="mb-2">You can use images to grow up your business.</li>
+                    <li class="mb-2">Make editing, graphic designing and create as you like.</li>
+                    <li class="mb-2">Use in your websites and applications as you like.</li>
+                    <li class="mb-2">Make wallpaper for your smart phones, computers and desktops</li>
+                    <li>Be more creative and improve your business with our images. Thanks.</li>
+                </ul>
+            <!-- </div> -->
+            <h1 class="text-center">What is <span class="text-grd">not allowed</span> ?</h1>
+            <ul class="fs-20 mx-auto">
+                <li class="mb-2">Don't sell photos to another people.</li>
+                <li>Don't use in photography competitions.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- <div id="aboutus" class="page-content">
+        <h2>about us</h2>
+    </div> -->
+
+    <div id="contactus" class="page-content">
+        <div class="row row-cols-md-2 row-cols-1 mt-md-4 mt-4 contactus w-100 mx-auto">
+            <div class="col">
+                <img src="storage/template_img/contact-pg-img.jpg" class="float-md-end pe-md-4 pb-md-4 me-md-5">
+            </div>
+            <div class="col">
+                <div class="ps-2 form-con">
+                    <h3 class="mt-2">If any questions, </h3>
+                    <h1>Contact Us</h1>
+                    <form action="#" method="post" class="d-flex flex-column ps-md-4 pt-md-4" id="contact-form">
+                        <div id="contact-form-success-alert"></div>
+                        <span class="error-span text-danger" id="name-error"></span>
+                        <input type="text" name="name" placeholder="Name" class="mb-3">
+                        <span class="error-span text-danger" id="email-error"></span>
+                        <input type="email" name="email" placeholder="Email" class="mb-3">
+                        <span class="error-span text-danger" id="message-error"></span>
+                        <textarea id="message-input" cols="45" rows="5" placeholder="Message" class="mb-3"></textarea>
+                        <b class="mb-1" id="loading-3">Loading..</b>
+                        <div>
+                            <button type="submit" class="submit-btn px-4 py-2 rounded text-light">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="profile" class="page-content">
+        <div class="container rounded mt-3">
+            <button class="btn btn-sm btn-outline-secondary mb-3" id="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> logout</button>
+            <div class="profile-layout mx-auto">
+                <div class="d-md-flex d-block">
+                    <div class="overflow-hidden rounded shadow-sm me-md-4" style="width: 200px;height: 200px;">
+                        <figure>
+                            <img src="storage/template_img/blank_profile.png" class="profile-img" alt="profile" width="200px">
+                        </figure>
+                    </div>
+                    <div class="ms-md-3">
+                        <h2 id="pf-name"></h2>
+                        <h5 class="user-role" id="pf-role"></h5>
+                        <!-- <div id="download"></div> -->
+                        <a href="#setting" class="p-edit-btn mt-2 rounded btn btn-dark">Profile setting <i class="fa-regular fa-pen-to-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex mt-3 fs-18 mx-5">
+                <div class="w-50 user-action me-2 user-act-active" data-id="gl3084">
+                    <span><i class="fa-regular fa-heart"></i></span>
+                    <span>Liked</span>
+                </div>
+                <div class="w-50 user-action me-2" data-id="gc2801">
+                    <span><i class="fa-regular fa-plus-square"></i></span>
+                    <span>Collected</span>
+                </div>
+            </div>
+            <div class="user-gallery border-top mt-3">
+                <div id="gl3084" class="g-page">Liked images</div>
+                <div id="gc2801" class="g-page">Collected images</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="setting" class="page-content">
+        <div class="container mt-3">
+            <button class="btn btn-sm btn-outline-secondary mb-3" onclick="window.history.back()"><i class="fa-solid fa-arrow-left"></i></button>
+            <div class="mx-auto" style="max-width: 40rem; width: 100%;">
+                <div class="d-flex mb-3 fs-18">
+                    <div class="w-50 me-2 pb-2 st-action st-act-active" data-id="st4271">
+                        <span><i class="fa-solid fa-circle-info"></i></span>
+                        <span>Profile info</span>
+                    </div>
+                    <div class="w-50 me-2 pb-2 st-action" data-id="st9176">
+                        <span><i class="fa-solid fa-key"></i></span>
+                        <span>Change password</span>
+                    </div>
+                </div>
+                <div class="st-page st-page-active" id="st4271">
+                    <form enctype="multipart/form-data" class="pro-upd-form d-flex flex-column" id="profile-upd-form">
+                        <span class="error-span text-danger" id="image-error"></span>
+                        <div class="rounded mb-1 overflow-hidden" style="width: 150px;height: 150px;">
+                            <img src="storage/template_img/blank_profile.png" class="profile-img" alt="preview-img" id="preview-img" width="150px">
+                        </div>
+                        <label for="file-input" class="btn btn-sm btn-secondary mb-2" style="width: fit-content;"><i class="fa-solid fa-arrow-up-from-bracket"></i> upload</label>
+                        <input type="file" name="image" id="file-input" class="d-none">
+                        <label for="name">Username</label>
+                        <span class="error-span text-danger" id="name-error"></span>
+                        <input type="text" name="name" id="name" class="mb-3">
+                        <label for="email">Email</label>
+                        <span class="error-span text-danger" id="email-error"></span>
+                        <input type="email" name="email" id="email" class="mb-3">
+                        <input type="hidden" name="user_id">
+                        <b class="mb-1" id="loading-1">Loading..</b>
+                        <div>
+                            <button class="btn btn-primary" type="submit">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="st-page" id="st9176">
+                    <form action="#" method="post" class="pass-change-form d-flex flex-column" id="change-pass-form">
+                        <p>Update your password for more secured. Make a strong wall.</p>
+                        <div id="password-form-success-alert"></div>
+                        <label for="old-pass">Enter your password</label>
+                        <span class="error-span text-danger" id="current-password-error"></span>
+                        <input type="password" name="current_password" id="old-pass" class="pass-input mb-3">
+                        <label for="new-pass">Enter new password</label>
+                        <span class="error-span text-danger" id="password-error"></span>
+                        <input type="password" name="password" id="new-pass" class="pass-input mb-3">
+                        <label for="confirm-pass">Confirm new password</label>
+                        <input type="password" name="confirm_password" id="confirm-pass" class="pass-input mb-3">
+                        <span class="form-check mb-3"><input type="checkbox" id="hide-show-pass" class="form-check-input px-2" style="width:auto;height: auto;">Show password</span>
+                        <input type="hidden" name="user_id">
+                        <b class="mb-1" id="loading-2">Loading..</b>
+                        <div>
+                            <button class="btn btn-primary" type="submit">Save password</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</content>
+
+  
+
+    <script src="js/jquery-3.6.4.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/live_file_upload.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // owl corousel 
+            $('.owl-carousel').owlCarousel({
+                items: 9,
+                pagination: false,
+                responsive: true,
+            });
+        })
+    </script>
+</body>
+</html>

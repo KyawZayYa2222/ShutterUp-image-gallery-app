@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ShutterUp - AdminDashboard</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <span>Shutter Up</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Kevin Anderson</h6>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+
+      <li class="nav-heading">Pages</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="profile.html">
+          <i class="bi bi-person"></i>
+          <span>Profile</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="category.html">
+          <i class="bi bi-grid-3x2-gap"></i>
+          <span>Category</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="image-file-upload.html">
+          <i class="bi bi-plus-square"></i>
+          <span>Image & File</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="contact.html">
+          <i class="bi bi-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </li><!-- End Contact Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="member.html">
+          <i class="bi bi-card-list"></i>
+          <span>Members</span>
+        </a>
+      </li><!-- End Register Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Loggout</span>
+        </a>
+      </li><!-- End Blank Page Nav -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+    <section id="section dashboard">
+        <div class="pagetitle">
+            <h1>Dashboard</h1>
+            <nav>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Image&File</a></li>
+                <li class="breadcrumb-item active">Overview</li>
+              </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <div id="uploaded-image-overview">
+          <h2>Uploaded Images Overview</h2>
+          <a href="#upload-form" class="btn btn-primary" id="upload-form-link">Upload File <i class="bi bi-arrow-right"></i></a>
+        </div> <!-- uploaded file overview -->
+
+        <div id="file-upload-form">
+          <a href="#file-overview" class="btn btn-sm btn-outline-secondary float-end mb-2" id="file-overview-link"><i class="bi bi-arrow-left"></i></a>
+          <h2>Upload Form</h2>
+          <p>
+              Notes: Need to fill all fields correctly. Make sure that you are importing same image with difference quality
+              and size.
+          </p>
+          <form id="image-file-upload-form" enctype="multipart/form-data">
+            <div id="file-upload-success-alert" style="width:100%;max-width: 600px;"></div>
+            <h5>Insert image file name</h5>
+            <small class="text-danger mb-1" id="img-name-error"></small>
+            <input type="text" name="img-file-name" class="form-control mb-4" style="width: 100%;max-width: 600px;">
+
+            <h5>Insert image categories</h5>
+            <h6>Search and import category. Need to fill one or more categroy related with image</h6>
+            <div class="d-flex" style="width: 100%;max-width: 500px;">
+              <input type="text" id="category-search" class="form-control" autocomplete="off" placeholder="search ..">
+              <button type="button" class="btn btn-sm btn-secondary ms-1"><i class="bi bi-search"></i></button>
+            </div>
+            <div id="search-result-con">
+              <!-- search result box form append js  -->
+            </div>
+            <!-- <span class="border-o border-bottom bg-primary px-1">Landscape</span> -->
+            <label class="mt-2">selected categories</label><br>
+            <small class="text-danger mb-1" id="category-error"></small>
+            <div class="border rounded px-2 py-1 mb-4" id="category-selected-box" style="width: 100%;max-width: 600px;min-height: 50px;">
+              <!-- category select box from append js -->
+            </div>
+
+            <h5>Insert original image here</h5>
+            <small class="text-danger mb-1" id="original-img-error"></small>
+            <span>Fill original quality & size image file or largest image file. </span>
+            <label for="original-img" class="btn btn-sm btn-secondary rounded mb-1">Choose file</label>
+            <input type="file" name="original_img" id="original-img" hidden>
+            <div id="original-img-property"></div>
+
+            <h5 class="mt-4">Insert high quality image here</h5>
+            <small class="text-danger mb-1" id="high-q-img-error"></small>
+            <span>Fill high quality & size image file or large image file. </span>
+            <label for="high-q-img" class="btn btn-sm btn-secondary rounded mb-1">Choose file</label>
+            <input type="file" name="high_q_img" id="high-q-img" hidden>
+            <div id="high-q-img-property"></div>
+
+            <h5 class="mt-4">Insert normal quality image here</h5>
+            <small class="text-danger mb-1" id="normal-q-img-error"></small>
+            <span>Fill normal quality & size image file or medium image file. </span>
+            <label for="normal-q-img" class="btn btn-sm btn-secondary rounded mb-1">Choose file</label>
+            <input type="file" name="normal_q_img" id="normal-q-img" hidden>
+            <div id="normal-q-img-property"></div>
+
+            <h5 class="mt-4">Insert lazy image here</h5>
+            <small class="text-danger mb-1" id="lazy-load-img-error"></small>
+            <span>Fill minimum quality & size, blur image file for lazy loading. </span>
+            <label for="lazy-load-img" class="btn btn-sm btn-secondary rounded mb-1">Choose file</label>
+            <input type="file" name="lazy_load_img" id="lazy-load-img" hidden>
+            <div id="lazy-load-img-property"></div>
+
+            <h5 class="mt-4">Insert premium feature</h5>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="premium-feature">
+              <label class="form-check-label" for="premium-feature">
+                Premium (allow only for premium members)
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-2">Upload</button>
+          </form>
+        </div>
+    </section>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>ShutterUp</span></strong>. All Rights Reserved
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  
+  <!-- Vendor JS Files -->
+  <script src="../js/jquery-3.6.4.js"></script>
+  <script src="../js/jquery.cookie.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/81e52b24ee.js" crossorigin="anonymous"></script>
+
+  <!-- Template Main JS File -->
+  <script src="js/main.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+
+</html>

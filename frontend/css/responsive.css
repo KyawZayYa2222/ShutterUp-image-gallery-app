@@ -1,0 +1,48 @@
+@media only screen and (max-width: 1200px) {
+    /* .navbar {
+        display: none;
+    } */
+    .contactus h1 {
+        font-size: 5em;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .premium-feature .pre-txt {
+        font-size: 4em;
+    }
+    .contactus h1 {
+        font-size: 4em;
+    }
+    .contactus form input, 
+    .contactus form textarea {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .img-action {
+        display: none;
+    }
+    .img-action-mobile {
+        display: block;
+    }
+    .contactus img, .contactus form {
+        border: none;
+    }
+    .contactus .form-con {
+        transform: translateY(-7rem);
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .welcome-text pre{
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 419px) {
+    .welcome-text pre{
+        font-size: 35px;
+    }
+}
